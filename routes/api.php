@@ -15,8 +15,5 @@ use App\Http\Controllers\RestaurantController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-Route::get('/test', [RestaurantController::class,'test']);
-Route::get('/{keyword?}', [RestaurantController::class,'index']);
+
+Route::get('/{keyword?}', [RestaurantController::class,'getRestaurantList']);
